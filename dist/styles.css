@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  grid-template-rows: 1fr 11fr;
+  height: 100vh;
+}
+
+.nav-header {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  grid-column: 1 / -1;
+}
+
+.title {
+  font-size: xx-large;
+  color: white;
+  margin: 0;
+  padding: 15px 20px;
+}
+
+.date-header {
+  padding-right: 20px;
+}
+
+.projects {
+  background-color: grey;
+  margin: 30px;
+  border-radius: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tasks {
+  background-color: red;
+  margin: 30px;
+  border-radius: 60px;
+}
+
+.project-header {
+}
