@@ -1,3 +1,9 @@
+:root {
+  --subheader-size: 25px;
+  --content-bg: #f1f5f9
+  ;
+}
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -21,7 +27,7 @@ body {
 }
 
 .title {
-  font-size: xx-large;
+  font-size: 40px;
   color: white;
   margin: 0;
   padding: 15px 20px;
@@ -32,19 +38,70 @@ body {
 }
 
 .projects {
-  background-color: grey;
+  background-color: var(--content-bg);
+  margin: 30px;
+  margin-left: 0px ;
+  border-radius: 0px 60px 60px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: var(--subheader-size);
+}
+
+.tasks {
+  background-color: var(--content-bg);
   margin: 30px;
   border-radius: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: var(--subheader-size);
 }
-
-.tasks {
-  background-color: red;
-  margin: 30px;
-  border-radius: 60px;
+.project-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
-
+.task-header,
 .project-header {
+  margin-bottom: 10px;
+}
+
+.project-header,
+.divider {
+  margin-left: 15px;
+}
+.divider {
+  border: 1px solid black;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 15px;
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.project-item {
+  padding: 10px;
+  transition: all 0.5s;
+}
+
+.project-item:hover {
+  background-color: black;
+  color: white;
+}
+.project-item p {
+  margin: 0;
+}
+
+.fa-circle-plus {
+  align-self: center;
+  margin-top: 15px;
 }
