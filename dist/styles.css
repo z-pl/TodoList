@@ -105,3 +105,22 @@ body {
   align-self: center;
   margin-top: 15px;
 }
+
+.form-container {
+  align-self: center;
+}
+
+#project-name {
+  height: 30px;
+  border-radius: 3px;
+  border: 2px solid black;
+  font-size: medium;
+  transition: all 0.33s;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+input#project-name:focus {
+  border-radius: 18px;
+  outline: 0;
+}
