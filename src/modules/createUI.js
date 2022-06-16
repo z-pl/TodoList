@@ -1,4 +1,4 @@
-import { createNavHeader, createProjectContent, updateProjectList } from "./createDomElements";
+import { createNavHeader, createProjectContent, updateProjectList, updateTaskList } from "./createDomElements";
 
 const container = document.querySelector(".container");
 const project = document.querySelector(".projects");
@@ -40,13 +40,42 @@ const getProjectList = () => {
   return element;
 }
 
+const getAllProjects = () => {
+  const element = getProjectList().querySelectorAll(".project");
+  return element;
+}
 const updateProjectListPage = (newProjectName) => {
   const projectList = getProjectList();
   const newProject = updateProjectList(newProjectName);
-  
+
   projectList.insertAdjacentHTML("beforeend", newProject);
 }
 
+const getTaskList = () => {
+  const element = document.querySelector(".task-list");
+  return element;
+}
+
+const getAddTaskBtn = () => {
+  const element = document.querySelector("#add-task");
+  return element;
+}
+
+const getCancelTaskBtn = () => {
+  const element = document.querySelector("#cancel-task");
+  return element;
+}
+
+const getAddTaskFormBtn = () => {
+  const element = document.querySelector("#addTask-btn");
+  return element;
+}
+const updateTaskPage = (newTaskName) => {
+  const taskList = getTaskList();
+  const newTask = updateTaskList(newTaskName);
+
+  taskList.insertAdjacentHTML("beforeend", newTask);
+}
 
 export {
         displayPage,
@@ -56,5 +85,10 @@ export {
         getProjectForm,
         getAddProjectBtn,
         getProjectList,
-        updateProjectListPage
+        updateProjectListPage,
+        getAllProjects,
+        updateTaskPage,
+        getAddTaskBtn,
+        getCancelTaskBtn,
+        getAddTaskFormBtn
       };

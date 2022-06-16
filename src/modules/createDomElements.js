@@ -22,7 +22,7 @@ const createProjectContent = () => {
 
 const createProjectsList = () => {
   const projectList =
-  `<ul class="project-list">
+  `<div class="project-list">
     <div class = "project-item">
       <p class = "project"> Default sadasda</p>
     </div>
@@ -32,7 +32,7 @@ const createProjectsList = () => {
     <div class = "project-item">
       <p class = "project"> Deasdsada fault</p>
     </div>
-  </ul>`;
+  </div>`;
 
   return projectList;
 }
@@ -50,8 +50,8 @@ const createProjectsForm = () => {
   `<div class = "form-container">
     <form action = "#" method = "get">
       <input type = "text" id = "project-name" placeholder = "project name">
-      <input type= "image" id = "add-project" src="../dist/img/circle-check-regular.svg"/>
-      <input type= "image" id = "cancel-project" src="../dist/img/circle-xmark-regular.svg"/>
+      <input type= "image" id = "add-project" src="img/circle-check-regular.svg"/>
+      <input type= "image" id = "cancel-project" src="img/circle-xmark-regular.svg"/>
     </form>
   </div>`
 
@@ -68,5 +68,14 @@ const updateProjectList = (projectName) => {
   return projectElement;
 }
 
+const updateTaskList = (taskName) => {
+  const taskElement =
+  `<div class = "task-item">
+    <p class = "task">${taskName}</p>
+  </div>`;
 
-export { createNavHeader,  createProjectContent, updateProjectList };
+  return taskElement;
+}
+
+
+export { createNavHeader,  createProjectContent, updateProjectList, updateTaskList };

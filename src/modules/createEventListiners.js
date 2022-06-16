@@ -4,7 +4,12 @@ import { getProjectInput,
          getProjectForm,
          getAddProjectBtn,
          getProjectList,
-         updateProjectListPage
+         updateProjectListPage,
+         getAllProjects,
+         updateTaskPage,
+         getAddTaskBtn,
+         getCancelTaskBtn,
+         getAddTaskFormBtn
          }
 from "./createUI";
 
@@ -12,6 +17,7 @@ const createAddEventListiners = () => {
   createAddProjectEventListiner();
   createCancelProjectEventListiner();
   createAddProjectListEventListiner();
+  createProjectEventListiner();
 }
 
 const createAddProjectEventListiner = () => {
@@ -25,7 +31,9 @@ const createAddProjectEventListiner = () => {
     projectForm.style = "display: none";
     addProjectListElement.style = "display: inline-block";
     updateProjectListPage(projectInputField.value);
+
   })
+
 }
 
 const createCancelProjectEventListiner = () => {
@@ -51,6 +59,16 @@ const createAddProjectListEventListiner = () =>{
   })
 }
 
+const createProjectEventListiner = () => {
+  const allProjectElements = getAllProjects();
+
+  allProjectElements.forEach(project => {
+    project.addEventListener("click", e => {
+      console.log(e);
+      // place update task function here
+    })
+  })
+}
 
 
 
