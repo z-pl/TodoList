@@ -1,12 +1,16 @@
 :root {
   --subheader-size: 25px;
-  --content-bg: #f1f5f9
-  ;
+  --content-bg: #f1f5f9;
+  --nav-color: #16a34a;
+  --default-textColor: black;
+  --default-bg: white;
+  --pill-bg: #dcfce7;
 }
 
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  color: var(--default-textColor);
 }
 
 .container {
@@ -14,11 +18,11 @@ body {
   grid-template-columns: 4fr 8fr;
   grid-template-rows: 1fr 11fr;
   height: 100vh;
+  background-color: var(--default-bg)
 }
 
 .nav-header {
-  background-color: black;
-  color: white;
+  background-color: var(--nav-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,7 +32,6 @@ body {
 
 .title {
   font-size: 40px;
-  color: white;
   margin: 0;
   padding: 15px 20px;
 }
@@ -56,6 +59,11 @@ body {
   flex-direction: column;
   align-items: center;
   font-size: var(--subheader-size);
+}
+
+.projects,
+.tasks {
+  background-color: var(--pill-bg);
 }
 .project-content {
   display: flex;

@@ -9,7 +9,6 @@ const displayPage = () => {
 }
 
 
-
 const getProjectInput = () => {
   const element = document.querySelector("#project-name")
   return element;
@@ -70,12 +69,24 @@ const getAddTaskFormBtn = () => {
   const element = document.querySelector("#addTask-btn");
   return element;
 }
+
+const getTaskForm = () => {
+  const element = document.querySelector(".task-form");
+  return element;
+}
+
+const getTaskName = () => {
+  const element = document.querySelector("#task-name");
+  return element;
+}
 const updateTaskPage = (newTaskName) => {
   const taskList = getTaskList();
-  const newTask = updateTaskList(newTaskName);
+  const newTask = updateTaskList(newTaskName)
 
   taskList.insertAdjacentHTML("beforeend", newTask);
 }
+
+
 
 export {
         displayPage,
@@ -90,5 +101,8 @@ export {
         updateTaskPage,
         getAddTaskBtn,
         getCancelTaskBtn,
-        getAddTaskFormBtn
+        getAddTaskFormBtn,
+        getTaskForm,
+        getTaskName,
+        getTaskList
       };
